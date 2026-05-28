@@ -80,7 +80,7 @@ app.get('/api/contacts', async (req, res) => {
     const result = await pool.query('SELECT * FROM contacts ORDER BY submitted_at DESC');
     res.json(result.rows);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch contacts' });
+    res.status(500).json({ error: 'Failed to save contact' });
   }
 });
 
